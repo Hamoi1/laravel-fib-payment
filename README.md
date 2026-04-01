@@ -1,4 +1,4 @@
-# Laravel FIB Integration
+# Laravel FIB Payment (First Iraqi Bank)
 
 <p align="center">
   <a href="https://packagist.org/packages/hamoi1/laravel-fib-payment"><img src="https://img.shields.io/packagist/v/hamoi1/laravel-fib-payment.svg?style=flat-square" alt="Latest Version on Packagist"></a>
