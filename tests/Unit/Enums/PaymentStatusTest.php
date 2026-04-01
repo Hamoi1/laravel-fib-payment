@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Hamoi1\FibIntegration\Enums\PaymentStatus;
+use Hamoi1\FibPayment\Enums\PaymentStatus;
 
 it('has correct values', function (): void {
     expect(PaymentStatus::PAID->value)->toBe('PAID')

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Hamoi1\FibIntegration\Enums\Currency;
-use Hamoi1\FibIntegration\Data\PaymentRequest;
+use Hamoi1\FibPayment\Enums\Currency;
+use Hamoi1\FibPayment\Data\PaymentRequest;
 
 it('can be created with defaults', function (): void {
     $request = new PaymentRequest(amount: 100.0);

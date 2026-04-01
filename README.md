@@ -118,9 +118,9 @@ FIB_ALLOWED_CALLBACK_IPS=
 The simplest way to use the package:
 
 ```php
-use Hamoi1\FibIntegration\Facades\Fib;
-use Hamoi1\FibIntegration\Data\PaymentRequest;
-use Hamoi1\FibIntegration\Enums\Currency;
+use Hamoi1\FibPayment\Facades\Fib;
+use Hamoi1\FibPayment\Data\PaymentRequest;
+use Hamoi1\FibPayment\Enums\Currency;
 
 // Create a payment
 $response = Fib::createPayment(new PaymentRequest(
@@ -139,7 +139,7 @@ $qrCode = $response->qrCode;
 ### 2. Check Payment Status
 
 ```php
-use Hamoi1\FibIntegration\Facades\Fib;
+use Hamoi1\FibPayment\Facades\Fib;
 
 $status = Fib::getPaymentStatus($paymentId);
 
@@ -176,8 +176,8 @@ $refunded = Fib::refundPayment($paymentId); // bool
 For better testability and cleaner architecture:
 
 ```php
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
-use Hamoi1\FibIntegration\Data\PaymentRequest;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\Data\PaymentRequest;
 
 final class CheckoutController
 {
@@ -219,10 +219,10 @@ FibException (abstract base)
 ### Handling Examples
 
 ```php
-use Hamoi1\FibIntegration\Exceptions\AuthenticationException;
-use Hamoi1\FibIntegration\Exceptions\RateLimitException;
-use Hamoi1\FibIntegration\Exceptions\PaymentFailedException;
-use Hamoi1\FibIntegration\Exceptions\FibException;
+use Hamoi1\FibPayment\Exceptions\AuthenticationException;
+use Hamoi1\FibPayment\Exceptions\RateLimitException;
+use Hamoi1\FibPayment\Exceptions\PaymentFailedException;
+use Hamoi1\FibPayment\Exceptions\FibException;
 
 try {
     $response = Fib::createPayment($request);
@@ -253,7 +253,7 @@ try {
 Protect your webhook endpoint from invalid requests:
 
 ```php
-use Hamoi1\FibIntegration\Http\Middleware\VerifyFibWebhook;
+use Hamoi1\FibPayment\Http\Middleware\VerifyFibWebhook;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/fib/webhook', [PaymentController::class, 'handleWebhook'])
@@ -276,7 +276,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use Hamoi1\FibIntegration\Enums\PaymentStatus;
+use Hamoi1\FibPayment\Enums\PaymentStatus;
 
 final class PaymentController extends Controller
 {
@@ -326,10 +326,10 @@ FIB_ALLOWED_CALLBACK_IPS=203.0.113.10,203.0.113.11
 In your application tests, mock the interface:
 
 ```php
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
-use Hamoi1\FibIntegration\Data\PaymentResponse;
-use Hamoi1\FibIntegration\Data\PaymentStatusInfo;
-use Hamoi1\FibIntegration\Enums\PaymentStatus;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\Data\PaymentResponse;
+use Hamoi1\FibPayment\Data\PaymentStatusInfo;
+use Hamoi1\FibPayment\Enums\PaymentStatus;
 use Illuminate\Support\Facades\App;
 use Mockery;
 
@@ -371,7 +371,7 @@ it('handles paid webhook', function () {
             paymentId: 'pay-test-456',
             status: PaymentStatus::PAID,
             validUntil: now()->addHour()->toIso8601String(),
-            amount: new \Hamoi1\FibIntegration\Data\MonetaryValue(1000, \Hamoi1\FibIntegration\Enums\Currency::IQD),
+            amount: new \Hamoi1\FibPayment\Data\MonetaryValue(1000, \Hamoi1\FibPayment\Enums\Currency::IQD),
         ));
 
     App::instance(FibClientInterface::class, $mock);
@@ -426,7 +426,7 @@ Route::get('/fib/debug', function () {
         'client_id' => config('fib.client_id') ? '***' . substr(config('fib.client_id'), -4) : 'NOT SET',
         'client_secret_set' => ! empty(config('fib.client_secret')),
         'callback_url' => config('fib.callback_url'),
-        'base_url' => \Hamoi1\FibIntegration\Enums\FibEnvironment::from(config('fib.environment'))->baseUrl(),
+        'base_url' => \Hamoi1\FibPayment\Enums\FibEnvironment::from(config('fib.environment'))->baseUrl(),
     ];
 });
 ```

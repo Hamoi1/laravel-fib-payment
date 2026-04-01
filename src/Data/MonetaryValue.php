@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Data;
+namespace Hamoi1\FibPayment\Data;
 
-use Hamoi1\FibIntegration\Enums\Currency;
+use Hamoi1\FibPayment\Enums\Currency;
 
 readonly class MonetaryValue
 {

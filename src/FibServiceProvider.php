@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration;
+namespace Hamoi1\FibPayment;
 
 use Illuminate\Support\ServiceProvider;
-use Hamoi1\FibIntegration\Enums\FibEnvironment;
-use Hamoi1\FibIntegration\Services\FibPaymentService;
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\Enums\FibEnvironment;
+use Hamoi1\FibPayment\Services\FibPaymentService;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
 
 final class FibServiceProvider extends ServiceProvider
 {

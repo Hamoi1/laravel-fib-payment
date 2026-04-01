@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Facades;
+namespace Hamoi1\FibPayment\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
 
 /**
- * @method static \Hamoi1\FibIntegration\Data\PaymentResponse createPayment(\Hamoi1\FibIntegration\Data\PaymentRequest $request)
- * @method static \Hamoi1\FibIntegration\Data\PaymentStatusInfo getPaymentStatus(string $paymentId)
+ * @method static \Hamoi1\FibPayment\Data\PaymentResponse createPayment(\Hamoi1\FibPayment\Data\PaymentRequest $request)
+ * @method static \Hamoi1\FibPayment\Data\PaymentStatusInfo getPaymentStatus(string $paymentId)
  * @method static bool cancelPayment(string $paymentId)
  * @method static bool refundPayment(string $paymentId)
  *

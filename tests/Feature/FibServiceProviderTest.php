@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Hamoi1\FibIntegration\Facades\Fib;
+use Hamoi1\FibPayment\Facades\Fib;
 use Illuminate\Support\ServiceProvider;
-use Hamoi1\FibIntegration\FibServiceProvider;
-use Hamoi1\FibIntegration\Services\FibPaymentService;
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\FibServiceProvider;
+use Hamoi1\FibPayment\Services\FibPaymentService;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
 
 it('registers the service provider', function (): void {
     $providers = app()->getProviders(FibServiceProvider::class);

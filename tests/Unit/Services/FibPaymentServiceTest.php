@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
-use Hamoi1\FibIntegration\Enums\Currency;
-use Hamoi1\FibIntegration\Data\PaymentRequest;
-use Hamoi1\FibIntegration\Enums\PaymentStatus;
-use Hamoi1\FibIntegration\Data\PaymentResponse;
-use Hamoi1\FibIntegration\Data\PaymentStatusInfo;
-use Hamoi1\FibIntegration\Services\FibPaymentService;
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\Enums\Currency;
+use Hamoi1\FibPayment\Data\PaymentRequest;
+use Hamoi1\FibPayment\Enums\PaymentStatus;
+use Hamoi1\FibPayment\Data\PaymentResponse;
+use Hamoi1\FibPayment\Data\PaymentStatusInfo;
+use Hamoi1\FibPayment\Services\FibPaymentService;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
 
 beforeEach(function (): void {
     config(['fib.environment' => 'stage']);

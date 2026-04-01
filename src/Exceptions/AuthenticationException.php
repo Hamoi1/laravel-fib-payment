@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Exceptions;
+namespace Hamoi1\FibPayment\Exceptions;
 
 final class AuthenticationException extends FibException
 {

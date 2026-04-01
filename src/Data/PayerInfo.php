@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Data;
+namespace Hamoi1\FibPayment\Data;
 
 readonly class PayerInfo
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Enums;
+namespace Hamoi1\FibPayment\Enums;
 
 enum Currency: string
 {

@@ -1,5 +1,5 @@
 {
-    "name": "hamoi1/laravel-fib-integration",
+    "name": "hamoi1/laravel-fib-payment",
     "description": "A Laravel package for integrating with the First Iraqi Bank (FIB) payment gateway, providing seamless payment processing and management.",
     "keywords": [
         "fib",
@@ -37,21 +37,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Hamoi1\\FibIntegration\\": "src/"
+            "Hamoi1\\FibPayment\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hamoi1\\FibIntegration\\Tests\\": "tests/"
+            "Hamoi1\\FibPayment\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Hamoi1\\FibIntegration\\FibServiceProvider"
+                "Hamoi1\\FibPayment\\FibServiceProvider"
             ],
             "aliases": {
-                "Fib": "Hamoi1\\FibIntegration\\Facades\\Fib"
+                "Fib": "Hamoi1\\FibPayment\\Facades\\Fib"
             }
         }
     },

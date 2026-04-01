@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Data;
+namespace Hamoi1\FibPayment\Data;
 
-use Hamoi1\FibIntegration\Enums\PaymentStatus;
-use Hamoi1\FibIntegration\Enums\DecliningReason;
+use Hamoi1\FibPayment\Enums\PaymentStatus;
+use Hamoi1\FibPayment\Enums\DecliningReason;
 
 readonly class PaymentStatusInfo
 {

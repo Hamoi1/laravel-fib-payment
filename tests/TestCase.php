@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Tests;
+namespace Hamoi1\FibPayment\Tests;
 
-use Hamoi1\FibIntegration\FibServiceProvider;
+use Hamoi1\FibPayment\FibServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra

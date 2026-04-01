@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Services;
+namespace Hamoi1\FibPayment\Services;
 
-use Hamoi1\FibIntegration\Contracts\FibClientInterface;
-use Hamoi1\FibIntegration\Data\PaymentRequest;
-use Hamoi1\FibIntegration\Data\PaymentResponse;
-use Hamoi1\FibIntegration\Data\PaymentStatusInfo;
-use Hamoi1\FibIntegration\Enums\FibEnvironment;
-use Hamoi1\FibIntegration\Exceptions\AuthenticationException;
-use Hamoi1\FibIntegration\Exceptions\PaymentFailedException;
-use Hamoi1\FibIntegration\Exceptions\RateLimitException;
+use Hamoi1\FibPayment\Contracts\FibClientInterface;
+use Hamoi1\FibPayment\Data\PaymentRequest;
+use Hamoi1\FibPayment\Data\PaymentResponse;
+use Hamoi1\FibPayment\Data\PaymentStatusInfo;
+use Hamoi1\FibPayment\Enums\FibEnvironment;
+use Hamoi1\FibPayment\Exceptions\AuthenticationException;
+use Hamoi1\FibPayment\Exceptions\PaymentFailedException;
+use Hamoi1\FibPayment\Exceptions\RateLimitException;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Cache;

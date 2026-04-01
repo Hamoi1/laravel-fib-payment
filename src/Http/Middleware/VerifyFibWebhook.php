@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hamoi1\FibIntegration\Http\Middleware;
+namespace Hamoi1\FibPayment\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Hamoi1\FibIntegration\Enums\PaymentStatus;
+use Hamoi1\FibPayment\Enums\PaymentStatus;
 use Symfony\Component\HttpFoundation\Response;
 
 final class VerifyFibWebhook
