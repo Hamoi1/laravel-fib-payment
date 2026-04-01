@@ -12,7 +12,6 @@
         "integration",
         "package"
     ],
-    "type": "library",
     "license": "MIT",
     "authors": [
         {
