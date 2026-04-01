@@ -1,10 +1,10 @@
 # Laravel FIB Integration
 
 <p align="center">
-  <a href="https://packagist.org/packages/hamoi1/laravel-fib-integration"><img src="https://img.shields.io/packagist/v/hamoi1/laravel-fib-integration.svg?style=flat-square" alt="Latest Version on Packagist"></a>
-  <a href="https://packagist.org/packages/hamoi1/laravel-fib-integration"><img src="https://img.shields.io/packagist/php-v/hamoi1/laravel-fib-integration.svg?style=flat-square" alt="Supported PHP Version"></a>
-  <a href="https://packagist.org/packages/hamoi1/laravel-fib-integration"><img src="https://img.shields.io/badge/Laravel-11.x%20|%2012.x%20|%2013.x-orange?style=flat-square" alt="Laravel Versions"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/packagist/l/hamoi1/laravel-fib-integration.svg?style=flat-square" alt="License"></a>
+  <a href="https://packagist.org/packages/hamoi1/laravel-fib-payment"><img src="https://img.shields.io/packagist/v/hamoi1/laravel-fib-payment.svg?style=flat-square" alt="Latest Version on Packagist"></a>
+  <a href="https://packagist.org/packages/hamoi1/laravel-fib-payment"><img src="https://img.shields.io/packagist/php-v/hamoi1/laravel-fib-payment.svg?style=flat-square" alt="Supported PHP Version"></a>
+  <a href="https://packagist.org/packages/hamoi1/laravel-fib-payment"><img src="https://img.shields.io/badge/Laravel-11.x%20|%2012.x%20|%2013.x-orange?style=flat-square" alt="Laravel Versions"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/packagist/l/hamoi1/laravel-fib-payment.svg?style=flat-square" alt="License"></a>
 </p>
 
 A modern, type-safe Laravel SDK for First Iraqi Bank (FIB) payment integration. This package provides a fluent API for payment creation, status tracking, cancellations, refunds, and webhook protection with full dependency injection support.
@@ -41,7 +41,7 @@ A modern, type-safe Laravel SDK for First Iraqi Bank (FIB) payment integration. 
 Install via Composer:
 
 ```bash
-composer require hamoi1/laravel-fib-integration
+composer require hamoi1/laravel-fib-payment
 ```
 
 The package will auto-register via Laravel's discovery. Publish the configuration file:
