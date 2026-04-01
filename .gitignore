@@ -1,0 +1,14 @@
+/vendor
+/.phpunit.cache
+/.phpstan.cache
+/coverage
+.phpunit.result.cache
+composer.lock
+.env
+.env.backup
+.env.production
+auth.json
+/.idea
+/.vscode
+/.fleet
+.php-cs-fixer.cache
