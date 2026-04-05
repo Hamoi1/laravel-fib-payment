@@ -1,6 +1,7 @@
 {
     "name": "hamoi1/laravel-fib-payment",
     "description": "A Laravel package for integrating with the First Iraqi Bank (FIB) payment gateway, providing seamless payment processing and management.",
+    "homepage": "https://github.com/hamoi1/laravel-fib-payment",
     "keywords": [
         "fib",
         "first-iraqi-bank",
